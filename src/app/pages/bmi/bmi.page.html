@@ -1,0 +1,56 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>BMI</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card1">
+    <ion-card-content>
+     <p> We Care About You!</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card2">
+    <ion-card-content>
+      
+      <img src="../assets/img/formula.png" alt="">
+    
+    </ion-card-content>
+  </ion-card>
+  
+  
+ 
+  <div class="inputs">
+    <ion-item>
+      <ion-label position="floating">Weight (kilograms)</ion-label>
+      <ion-input [(ngModel)]="weight" type="number" min="1" max="100" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Height (meters) </ion-label>
+      <ion-input [(ngModel)]="height" type="number" min="1" max="3" required></ion-input>
+    </ion-item>
+  </div>
+  
+  <div class="btn">
+    <ion-button color="secondary" (click)="calculate()"><ion-icon name="calculator-sharp"></ion-icon>Calculate</ion-button>
+  </div>
+
+  <ion-card class="card3">
+    <ion-card-content>
+      <div>
+        <p> <b>Result:</b> <span id="output"></span></p>
+        <p> <b>Remarks: </b><span id="remarks"></span></p>
+        <p> <b>Recommendation: </b><span id="recommendation"></span></p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

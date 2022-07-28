@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Length Conversion</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="length-icon">
+      <ion-item class="item">
+        <ion-icon name="create"></ion-icon><ion-select class="size" placeholder="Please Select Unit"  [(ngModel)]="select_length" (ionChange)="length_changed()">
+          <ion-select-option class="label" value="l1"> Meters to Feet  </ion-select-option>
+          <ion-select-option class="label" value="l2"> Feet to Meters  </ion-select-option>
+          <ion-select-option class="label" value="l3"> Inches to Cm  </ion-select-option>
+          <ion-select-option class="label" value="l4"> Cm to Inches  </ion-select-option>
+          <ion-select-option class="label" value="l5"> Mm to Inches  </ion-select-option>
+          <ion-select-option class="label" value="l6"> Inches to Mm  </ion-select-option>
+          <ion-select-option class="label" value="l7"> Inches to Feet  </ion-select-option>
+          <ion-select-option class="label" value="l8"> Feet to Inches  </ion-select-option>
+       </ion-select>
+     </ion-item>
+  </ion-list>
+
+  <ion-card class="card1">
+    <ion-card-content>
+      <h1>Input value</h1>
+      <div class="form">
+        <h1 id="from"></h1>
+        <ion-input type="number" [(ngModel)]="textbox" required></ion-input>
+        <p>Result in <b><span id="to"></span></b></p>
+        <p align="center" id="result"></p>
+      </div>
+
+      <div class="btn">
+      <ion-button color="secondary" (click)="calculate()"><ion-icon name="calculator-sharp"></ion-icon>Convert</ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card2">
+    <ion-card-content>
+      <h1>Formula:</h1>
+      <h1 id="formula" align="center"></h1>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

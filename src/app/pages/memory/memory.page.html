@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><h5>Computer Memory Conversion</h5></ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="memo-icon">
+    
+    <ion-item class="item">
+      <ion-icon name="create"></ion-icon>  <ion-select class="size" placeholder="Please Select Unit " class="ion-text-wrap" [(ngModel)]="select_group" (ionChange)="select_changed()">
+      <ion-select-option class="label" value="c1" id="c1">Bits to Bytes  </ion-select-option>
+      <ion-select-option class="label" value="c2" id="c2">Bytes to Bits  </ion-select-option>
+      <ion-select-option class="label" value="c3" id="c3">Kilobytes (KB) to Megabytes (MB)</ion-select-option>
+      <ion-select-option class="label" value="c4" id="c4">Megabytes (MB) to Kilobytes (KB)  </ion-select-option>
+      <ion-select-option class="label" value="c5" id="c5">Gigabytes (GB) to Terabytes (TB) </ion-select-option>
+      <ion-select-option class="label" value="c6" id="c6">Terabytes (TB) to Gigabytes (GB)  </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-card class="card1">
+    <ion-card-content>
+      <h1>Input value</h1>
+      <div class="form">
+        <h1 id="from"></h1>
+        <ion-input type="number" [(ngModel)]="textbox" id="textbox" required></ion-input>
+        <p>Result in <b><span id="to"></span></b></p>
+        <p align="center" id="result"></p>
+      </div>
+
+      <div class="btn">
+      <ion-button color="secondary" (click)="calculate()"><ion-icon name="calculator-sharp"></ion-icon>Convert</ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card2">
+    <ion-card-content>
+      <h1>Formula:</h1>
+      <h1 id="formula" align="center"></h1>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

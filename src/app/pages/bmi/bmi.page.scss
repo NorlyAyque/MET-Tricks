@@ -1,0 +1,40 @@
+ion-content{
+    --ion-background-color: #c9d5ee ;
+    }
+.card1{ 
+    background: rgba(255, 255, 255, 0.5);
+    p{
+        text-align: center;
+    }
+}
+
+.card2{ 
+    background: rgba(255, 255, 255, 0.5);
+    img{
+        text-align: center;
+    }
+        
+}
+.card3{ 
+    background: rgba(255, 255, 255, 0.5);
+    p{
+        padding:10px;
+    }
+        
+}
+
+
+
+
+.btn{
+    padding: 10px;
+    text-align: center;
+  
+    ion-icon {
+        margin-right: 10px;
+        
+       
+    }  
+    
+
+}
